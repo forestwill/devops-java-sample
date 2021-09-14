@@ -27,13 +27,13 @@ pipeline {
             }
         }
 
-        stage ('unit test') {
-            steps {
-                container ('maven') {
-                    sh 'mvn clean -o -gs `pwd`/configuration/settings.xml test'
-                }
-            }
-        }
+#        stage ('unit test') {
+#            steps {
+#                container ('maven') {
+#                    sh 'mvn clean -o -gs `pwd`/configuration/settings.xml test'
+#               }
+#            }
+ #       }
 
         stage('sonarqube analysis') {
           steps {
